@@ -1,30 +1,9 @@
+#include "../inc/funcs.hpp"
+
 #include <algorithm>
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <vector>
 
-std::vector<char> seps = {' ', ',', '.', '!', '?'};
-bool isSep(char);
+std::vector<char> seps = {' ', ',', '.', '!', '?', '\n'};
 
-std::string messLine(std::string);
-std::string messWord(std::string);
-
-
-int main() {
-    std::fstream source;
-    std::fstream dest;
-    source.open("Source-text.txt");
-    dest.open("Generated-text.txt");
-
-    std::string line;
-
-    while(std::getline(source, line)) {
-        dest << messLine(line);
-    }
-    
-    return 0;
-}
 bool isSep(char buff) {
     for(auto el : seps) {
         if(buff == el)
@@ -43,6 +22,10 @@ std::string messLine(std::string line) {
         } else {
             buff += el;
         }
+        
+    }
+    if(!isSep(line.back())) {
+        retStr += messWord(buff);
     }
     return retStr;
 }

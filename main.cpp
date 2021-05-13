@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-std::vector<char> seps = {' ', ',', '.', '!', '?', '\n'};
+std::vector<char> seps = {' ', ',', '.', '!', '?'};
 bool isSep(char);
 
 std::string messLine(std::string);
@@ -14,8 +14,6 @@ std::string messWord(std::string);
 int main() {
     std::fstream source;
     std::fstream dest;
-    source.imbue(std::locale("pl_PL.ISO-8859-2"));
-    dest.imbue(std::locale("pl_PL.ISO-8859-2"));
     source.open("Source-text.txt");
     dest.open("Generated-text.txt");
 

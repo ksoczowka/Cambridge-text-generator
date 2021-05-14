@@ -13,7 +13,6 @@ make
 ```
 ### Open `Source-text.txt` file
 #### You need to open this file in `build/txt/` dir!!!
-#### ***Unfortunatetly, I don't do a bugfix yet and now you have to write everything in one line. Sorry for that, bugfix will be in days.***
 You can use whatever you want. In this file you must write what you want to be converted to this silly experimental text.
 ### Simply run generator
 ```

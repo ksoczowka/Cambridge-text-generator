@@ -14,7 +14,10 @@ int main() {
 
     while(std::getline(source, line)) {
         dest << messLine(line);
+        dest << '\n';
     }
-    
+    source.close();
+    dest.close();
+
     return 0;
 }
